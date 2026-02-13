@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To My Valentine</title>
+    <meta name="description" content="A romantic digital love letter — every moment with you is my favorite memory.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Cursor Canvas Overlay -->
+    <canvas id="cursor-canvas"></canvas>
+
+    <!-- Ambient Background Layers -->
+    <div class="bg-shapes">
+        <div class="blur-shape shape-1"></div>
+        <div class="blur-shape shape-2"></div>
+        <div class="blur-shape shape-3"></div>
+        <div class="blur-shape shape-4"></div>
+        <div class="blur-shape shape-5"></div>
+    </div>
+    <div id="floating-hearts-bg"></div>
+    <div id="particles-container"></div>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- HERO SECTION -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">To My Valentine <span class="heart-icon">❤️</span></h1>
+            <p class="hero-subtitle">Every moment with you is my favorite memory.</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- LOVE STORY TIMELINE -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="timeline">
+        <div class="section-container">
+            <h2 class="section-title">Our Love Story</h2>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-body">
+                            <h3>The Day We Met</h3>
+                            <p class="timeline-date">June 2016</p>
+                            <p>A beautiful beginning to our forever story. The moment our eyes met, everything changed.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-body">
+                            <h3>Our First Memory</h3>
+                            <p class="timeline-date">June 2017</p>
+                            <p>That magical first moment together — full of laughter, wonder, and the beginning of
+                                something beautiful.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-body">
+                            <h3>Our Favorite Moments</h3>
+                            <p class="timeline-date">2018 - 2025</p>
+                            <p>Every adventure, every quiet evening, every fights, every shared smile — these are the
+                                treasures of our
+                                love.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-body">
+                            <h3>Today & Forever</h3>
+                            <p class="timeline-date">Till Now</p>
+                            <p>And here we are — still falling in love every single day and I will fall for you always.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- HEART PHOTO COLLAGE -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="heart-collage">
+        <div class="section-container">
+            <h2 class="section-title">Moments of Love</h2>
+            <p class="section-subtitle">A heart full of our memories</p>
+            <div class="heart-collage-wrapper">
+                <div class="heart-collage-container" id="heartCollage">
+                    <!-- Filled dynamically by JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- PHOTO GALLERY -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="gallery">
+        <div class="section-container">
+            <h2 class="section-title">Into Our Journey</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-src="images/journey/1.jpeg">
+                    <div class="polaroid"><img src="images/journey/1.jpeg" alt="Memory 1" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=60'"><span
+                            class="polaroid-caption">Us 💕</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/2.jpeg">
+                    <div class="polaroid"><img src="images/journey/2.jpeg" alt="Memory 2" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=61'"><span
+                            class="polaroid-caption">Together ✨</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/3.jpeg">
+                    <div class="polaroid"><img src="images/journey/3.jpeg" alt="Memory 3" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=62'"><span
+                            class="polaroid-caption">Adventure 🌸</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/4.jpeg">
+                    <div class="polaroid"><img src="images/journey/4.jpeg" alt="Memory 4" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=63'"><span
+                            class="polaroid-caption">Love 💗</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/5.jpeg">
+                    <div class="polaroid"><img src="images/journey/5.jpeg" alt="Memory 5" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=64'"><span
+                            class="polaroid-caption">Forever 🌙</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/6.jpeg">
+                    <div class="polaroid"><img src="images/journey/6.jpeg" alt="Memory 6" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=65'"><span
+                            class="polaroid-caption">Joy 🦋</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/7.jpeg">
+                    <div class="polaroid"><img src="images/journey/7.jpeg" alt="Memory 7" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=66'"><span
+                            class="polaroid-caption">Bliss 💫</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/8.jpeg">
+                    <div class="polaroid"><img src="images/journey/8.jpeg" alt="Memory 8" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=67'"><span
+                            class="polaroid-caption">Moments 🌺</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/9.jpeg">
+                    <div class="polaroid"><img src="images/journey/9.jpeg" alt="Memory 9" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=68'"><span
+                            class="polaroid-caption">Magic ✨</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/10.jpeg">
+                    <div class="polaroid"><img src="images/journey/10.jpeg" alt="Memory 10" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=69'"><span
+                            class="polaroid-caption">Dreams 🌈</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/11.jpeg">
+                    <div class="polaroid"><img src="images/journey/11.jpeg" alt="Memory 11" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=70'"><span
+                            class="polaroid-caption">Smile 😊</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/12.jpeg">
+                    <div class="polaroid"><img src="images/journey/12.jpeg" alt="Memory 12" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=71'"><span
+                            class="polaroid-caption">Always 💖</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/13.jpeg">
+                    <div class="polaroid"><img src="images/journey/13.jpeg" alt="Memory 13" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=72'"><span
+                            class="polaroid-caption">Sunshine ☀️</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/14.jpeg">
+                    <div class="polaroid"><img src="images/journey/14.jpeg" alt="Memory 14" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=73'"><span
+                            class="polaroid-caption">Stars 🌟</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/15.jpeg">
+                    <div class="polaroid"><img src="images/journey/15.jpeg" alt="Memory 15" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=74'"><span
+                            class="polaroid-caption">Hearts 💓</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/16.jpeg">
+                    <div class="polaroid"><img src="images/journey/16.jpeg" alt="Memory 16" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=75'"><span
+                            class="polaroid-caption">Moments 🎉</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/17.jpeg">
+                    <div class="polaroid"><img src="images/journey/17.jpeg" alt="Memory 17" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=76'"><span
+                            class="polaroid-caption">Laughter 😄</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/18.jpeg">
+                    <div class="polaroid"><img src="images/journey/18.jpeg" alt="Memory 18" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=77'"><span
+                            class="polaroid-caption">Journey 🚀</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/19.jpeg">
+                    <div class="polaroid"><img src="images/journey/19.jpeg" alt="Memory 19" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=78'"><span
+                            class="polaroid-caption">Wonder 🌠</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/20.jpeg">
+                    <div class="polaroid"><img src="images/journey/20.jpeg" alt="Memory 20" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=79'"><span
+                            class="polaroid-caption">Paradise 🏝️</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/21.jpeg">
+                    <div class="polaroid"><img src="images/journey/21.jpeg" alt="Memory 21" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=80'"><span
+                            class="polaroid-caption">Peace ☮️</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/22.jpeg">
+                    <div class="polaroid"><img src="images/journey/22.jpeg" alt="Memory 22" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=81'"><span
+                            class="polaroid-caption">Harmony 🎵</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/23.jpeg">
+                    <div class="polaroid"><img src="images/journey/23.jpeg" alt="Memory 23" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=82'"><span
+                            class="polaroid-caption">Sparkle ✨</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/24.jpeg">
+                    <div class="polaroid"><img src="images/journey/24.jpeg" alt="Memory 24" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=83'"><span
+                            class="polaroid-caption">Grace 🌹</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/25.jpeg">
+                    <div class="polaroid"><img src="images/journey/25.jpeg" alt="Memory 25" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=84'"><span
+                            class="polaroid-caption">Beauty 🦢</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/26.jpeg">
+                    <div class="polaroid"><img src="images/journey/26.jpeg" alt="Memory 26" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=85'"><span
+                            class="polaroid-caption">Serenity 🕊️</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/27.jpeg">
+                    <div class="polaroid"><img src="images/journey/27.jpeg" alt="Memory 27" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=86'"><span
+                            class="polaroid-caption">Treasure 💎</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/28.jpeg">
+                    <div class="polaroid"><img src="images/journey/28.jpeg" alt="Memory 28" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=87'"><span
+                            class="polaroid-caption">Eternity ♾️</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/29.jpeg">
+                    <div class="polaroid"><img src="images/journey/29.jpeg" alt="Memory 29" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=88'"><span
+                            class="polaroid-caption">Unity 🤝</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/30.jpeg">
+                    <div class="polaroid"><img src="images/journey/30.jpeg" alt="Memory 30" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=89'"><span
+                            class="polaroid-caption">Infinity 💞</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/31.jpeg">
+                    <div class="polaroid"><img src="images/journey/31.jpeg" alt="Memory 31" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=90'"><span
+                            class="polaroid-caption">Bliss 🌷</span></div>
+                </div>
+                <div class="gallery-item" data-src="images/journey/32.jpeg">
+                    <div class="polaroid"><img src="images/journey/32.jpeg" alt="Memory 32" loading="lazy"
+                            onerror="this.src='https://picsum.photos/400/500?random=91'"><span
+                            class="polaroid-caption">Soulmate 💙</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- NEWSLETTER SECTION -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="newsletter">
+        <div class="section-container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-header">
+                    <h2 class="newsletter-title">Love Letter</h2>
+                    <div class="newsletter-date">Forever & Always</div>
+                </div>
+                <div class="newsletter-content">
+                    <p class="newsletter-text">
+                        Love you Sanju Sree, संजू श्री, സഞ്ജു ശ്രീ, சஞ்சு ஸ்ரீ, సంజు శ్రీ, ಸಂಜು ಶ್ರೀ, সন্তু শ্রী, ସଞ୍ଜୁ
+                        ଶ୍ରୀ, ਸੰਜੂ ਸ਼੍ਰੀ, સંજુ શ્રી, සංජු ශ්රී, سانجو سري, סנג'ו סרי, サンジュ・スリー, 桑朱·斯里, 산주 스리, สัญชู ศรี,
+                        ສັນຈູ ສີ, សាន់ជូ ស្រី, སན་ཇུ་སྲི།, ဆန်ဂျူသီရိ, ሳንጁ ስሪ, ᱥᱟᱱᱡᱩ ᱥᱨᱤ, ⵙⴰⵏⵊⵓ ⵙⵔⵉ, Санджу Шри, Σάντζου
+                        Σρι, Սանջու Սրի, სანჯუ სრი, ᏌᏂᏧ ᏍᎵ, ᓴᓐᔪ ᓯᕇ.
+                    </p>
+                </div>
+                <div class="newsletter-footer">
+                    <span class="newsletter-ornament">❦</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- LOVE MESSAGE -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="love-message">
+        <div class="section-container">
+            <div class="message-wrapper">
+                <div class="message-hearts" id="messageHearts"></div>
+                <div class="message-card glass-card">
+                    <span class="message-icon">💌</span>
+                    <p class="message-text">
+                        You are the most beautiful part of my life.<br>
+                        Every day with you feels like magic.<br>
+                        I love you more than words can explain.
+                    </p>
+                    <span class="message-signature">— Forever Yours</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ -->
+    <!-- LOVE COUNTER -->
+    <!-- ═══════════════════════════════════════════════════ -->
+    <section id="love-counter">
+        <div class="section-container">
+            <h2 class="section-title">Time Since Our Love Began</h2>
+            <p class="section-subtitle">June 2134, 2017 • 3:30 PM</p>
+            <div class="counter-grid">
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterYears">00</span>
+                    <span class="counter-label">Years</span>
+                </div>
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterMonths">00</span>
+                    <span class="counter-label">Months</span>
+                </div>
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterWeeks">000</span>
+                    <span class="counter-label">Weeks</span>
+                </div>
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterDays">0000</span>
+                    <span class="counter-label">Days</span>
+                </div>
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterHours">00</span>
+                    <span class="counter-label">Hours</span>
+                </div>
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterMinutes">00</span>
+                    <span class="counter-label">Minutes</span>
+                </div>
+                <div class="counter-box glass-card">
+                    <span class="counter-number" id="counterSeconds">00</span>
+                    <span class="counter-label">Seconds</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Happieeee Valentine's Day Pondattiii 💖</p>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <img src="" alt="Full view" id="lightboxImg">
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
